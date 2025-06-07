@@ -15,18 +15,15 @@ keys.forEach(key => {
     if (inputValue.length >= 4) {
       if (inputValue === "0704") {
         spinner.classList.remove('hide');
-
         setTimeout(() => {
           spinner.classList.add('hide');
           passwordScreen.classList.remove('show');
           passwordScreen.classList.add('hide');
-
           heartScreen.classList.remove('hide');
           heartScreen.classList.add('show');
 
-          const music = document.getElementById('bg-music');
-          music.play();
-        }, 5000); // 5s loading
+          document.getElementById('bg-music').play();
+        }, 5000); // 5s delay
       } else {
         alert("Sai mật khẩu! Nhập lại nha!");
         inputValue = "";
