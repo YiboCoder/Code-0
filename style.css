@@ -58,11 +58,6 @@ body {
   background-color: #ff69b4;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.key:hover {
-  background-color: #e91e63;
 }
 
 .spinner {
@@ -86,15 +81,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  overflow: hidden;
 }
 
 .container {
   position: relative;
   width: 100%;
   max-width: 500px;
-  height: 500px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
@@ -105,12 +101,13 @@ body {
 
 .svg-heart-container {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
   animation: glow 2s infinite alternate;
+  z-index: 10;
 }
 
 @keyframes glow {
@@ -120,7 +117,7 @@ body {
 
 .image-ring {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 300px;
   height: 300px;
@@ -144,7 +141,11 @@ body {
 }
 
 .text {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
-  font-size: 24px;
-  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
 }
